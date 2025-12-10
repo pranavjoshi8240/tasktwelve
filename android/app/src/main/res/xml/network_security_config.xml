@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Allow all HTTPS connections -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+    
+    <!-- Allow cleartext traffic for specific domains if needed (not required for dummyjson.com) -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">dummyjson.com</domain>
+    </domain-config>
+</network-security-config>
+
+
+
+
